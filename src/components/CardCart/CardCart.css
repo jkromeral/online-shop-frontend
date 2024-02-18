@@ -1,0 +1,88 @@
+#cardcart {
+  display: flex;
+  width: 80vw;
+  height: 20vh;
+  margin: 0 0 30px 0;
+  border-style: outset;
+  background-color: white;
+}
+
+#cardcart:hover {
+  cursor: pointer;
+}
+
+.cardcart-option {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 10vw;
+  height: 20vh;
+}
+
+.cardcart-option input {
+  width: 15px;
+  height: 15px;
+}
+
+.cardcart-option img {
+  width: 30px;
+  height: 30px;
+}
+
+.cardcart-option img:hover {
+  cursor: pointer;
+}
+
+.cardcart-image {
+  width: 20vw;
+  height: 20vh;
+}
+
+.cardcart-image img {
+  object-fit: contain;
+  width: 10vw;
+  height: 20vh;
+}
+
+.cardcart-desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  width: 60vw;
+  height: 20vh;
+}
+
+@media screen and (max-width: 1200px) {
+  #cardcart {
+    height: 40vh;
+  }
+  .cardcart-option {
+    width: 20vw;
+    height: 40vh;
+  }
+  .cardcart-image {
+    width: 30vw;
+    height: 40vh;
+  }
+  .cardcart-image img {
+    width: 30vw;
+    height: 40vh;
+  }
+  .cardcart-desc {
+    display: grid;
+    text-align: center;
+    width: 30vw;
+    height: 40vh;
+  }
+  .cardcart-desc .name {
+    text-align: center;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 40%;
+  }
+  .cardcart-desc p {
+    margin: 0;
+  }
+}

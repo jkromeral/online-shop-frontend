@@ -1,0 +1,84 @@
+#modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-layover {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 10);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.modal-con {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 80vh;
+  background-color: white;
+  opacity: 5;
+}
+
+.modal-image {
+  width: 35vw;
+  height: 80vh;
+  border: 1px solid gray;
+}
+
+.modal-desc {
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 35vw;
+  height: 80vh;
+}
+
+.modal-desc .top {
+  padding: 5px;
+}
+
+.modal-desc .middle {
+  display: grid;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+.modal-desc .middle .add-btn {
+  width: 20vw;
+  height: 5vh;
+  place-self: center;
+  margin: 15px;
+}
+
+.modal-desc .middle .add-btn:hover {
+  cursor: pointer;
+}
+
+.modal-desc .bottom {
+  padding: 5px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 800px) {
+  .modal-con {
+    width: 70vw;
+    height: 60vh;
+  }
+  .modal-desc {
+    height: 60vh;
+  }
+  .modal-desc .middle .add-btn {
+    width: 25vw;
+    height: 5vh;
+  }
+}

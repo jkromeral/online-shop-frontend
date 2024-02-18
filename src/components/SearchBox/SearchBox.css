@@ -1,0 +1,33 @@
+#searchbox {
+  display: flex;
+  justify-content: center;
+  border-style: ridge;
+}
+
+#searchbox input {
+  margin: 5px 0 5px 5px;
+  width: 40vw;
+  padding: 5px;
+}
+
+#searchbox button {
+  margin: 5px 5px 5px 0;
+  width: 5vw;
+  padding: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  #searchbox input {
+    margin: 2px 0 2px 2px;
+    font-size: 8px;
+    width: 30vw;
+    padding: 3px;
+  }
+  #searchbox button {
+    margin: 2px 2px 2px 0;
+    font-size: 8px;
+    width: 12vw;
+    padding: 3px;
+  }
+}

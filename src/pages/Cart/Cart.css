@@ -1,0 +1,79 @@
+#cart {
+  display: grid;
+  justify-content: center;
+  padding: 30px;
+  background-color: #fefefa;
+}
+
+#cart .username {
+  text-align: center;
+  font-size: 24px;
+}
+
+#cart .image-empty {
+  width: 40vw;
+  height: 50vh;
+}
+
+#cart .message1 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#cart .message2 {
+  font-size: 14px;
+  text-align: center;
+}
+
+#cart .cart-summary {
+  margin: auto;
+  position: relative;
+  width: 20vw;
+  height: 45vh;
+  border-style: outset;
+}
+
+.cart-summary .title {
+  text-align: center;
+}
+
+.cart-summary .details {
+  padding: 10px;
+}
+
+.cart-summary .details div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-summary button {
+  width: 80%;
+  padding: 10px;
+  margin: 5% 10%;
+}
+
+.cart-summary button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  #cart .cart-summary {
+    width: 60vw;
+    height: 55vh;
+  }
+  #cart .username {
+    font-size: 18px;
+  }
+  #cart .image-empty {
+    width: 70vw;
+    height: 50vh;
+  }
+  #cart .message1 {
+    font-size: 12px;
+  }
+
+  #cart .message2 {
+    font-size: 10px;
+  }
+}

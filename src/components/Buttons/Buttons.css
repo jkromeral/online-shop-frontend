@@ -1,0 +1,33 @@
+#buttons {
+  display: flex;
+  border: 1px solid black;
+  width: 10vw;
+  place-self: center;
+  margin: 15px;
+}
+
+#buttons button {
+  width: 5vw;
+  font-size: 18px;
+}
+
+#buttons button:hover {
+  cursor: pointer;
+}
+
+#buttons input {
+  width: 5vw;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  #buttons {
+    width: 22vw;
+  }
+  #buttons button {
+    width: 6vw;
+  }
+  #buttons input {
+    width: 10vw;
+  }
+}

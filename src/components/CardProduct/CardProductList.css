@@ -1,0 +1,26 @@
+#cardproductlist {
+  margin: 50px auto 50px auto;
+  width: 65vw;
+  height: auto;
+}
+
+.cardproductlist-con {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: space-evenly;
+  grid-row-gap: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  #cardproductlist {
+    margin: 30px;
+    width: 85vw;
+    height: auto;
+  }
+
+  .cardproductlist-con {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-evenly;
+  }
+}
