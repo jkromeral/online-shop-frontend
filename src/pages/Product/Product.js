@@ -18,6 +18,8 @@ const Product = ({
 }) => {
   const { category } = useParams();
 
+  // fetch data to display each product based on category
+
   useEffect(() => {
     fetch(`http://localhost:3001/category/${category}/${currentPage}`)
       .then((res) => res.json())

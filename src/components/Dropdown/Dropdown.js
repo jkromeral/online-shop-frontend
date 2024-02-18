@@ -8,6 +8,8 @@ const Dropdown = ({ currentPage }) => {
     <div id="dropdown">
       <button className="dropdown-btn">Categories</button>
       <div className="dropdown-con">
+        {/* shows each category */}
+
         {category.map((category, index) => {
           return (
             <Link key={index} to={`/category/${category.path}/${currentPage}`}>

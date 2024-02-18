@@ -3,7 +3,6 @@ import { useSearchParams } from "react-router-dom";
 import "./SearchBox.css";
 
 const SearchBox = () => {
-  // const [searchedItem, setSearchedItem] = useState("");
   const [products, setProducts] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams({
     item: "",
@@ -29,9 +28,6 @@ const SearchBox = () => {
         onChange={(event) =>
           setSearchParams({ item: event.target.value.replace(" ", "-") })
         }
-        // onChange={(event) =>
-        //   setSearchedItem(event.target.value.replace(" ", "-"))
-        // }
       />
       <button type="submit" onClick={onButtonSearch}>
         Search

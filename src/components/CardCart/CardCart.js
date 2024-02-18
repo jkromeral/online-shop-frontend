@@ -14,10 +14,12 @@ const CardCart = (props) => {
     product_total_price,
   } = props;
 
+  const username = useContext(UsernameContext);
+  const { selectedItems, setSelectedItems } = useContext(SelectedItemContext);
   const [quantity, setQuantity] = useState(product_quantity);
   const [total, setTotal] = useState(product_total_price);
 
-  const username = useContext(UsernameContext);
+  // remove item in user cart
 
   const onRemoveItem = () => {
     fetch(`http://localhost:3001/remove-item`, {
@@ -34,7 +36,7 @@ const CardCart = (props) => {
       .then((message) => console.log(message));
   };
 
-  const { selectedItems, setSelectedItems } = useContext(SelectedItemContext);
+  // select items to be added in user order
 
   const onSelectedItem = (event) => {
     const { value, checked } = event.target;

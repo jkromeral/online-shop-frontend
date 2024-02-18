@@ -8,22 +8,20 @@ import SignUp from "./pages/Signup/Signup";
 import Cart from "./pages/Cart/Cart";
 import Orders from "./pages/Orders/Orders";
 import Product from "./pages/Product/Product";
-import ProductSearch from "./pages/Product/ProductSearch";
 
 export const UsernameContext = React.createContext();
-export const PageContext = React.createContext();
 export const SelectedItemContext = React.createContext();
 
 const App = () => {
-  // USER LOGIN/SIGN UP
+  // CHECK IF LOGGED IN
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // USER INFO
+  // USER INFORMATION
   const [username, setUsername] = useState("");
   const [userFirstName, setUserFirstName] = useState("");
   const [userLastName, setUserLastName] = useState("");
 
-  // DISPLAY OF PRODUCTS
+  // DISPLAY PRODUCTS
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [lastPage, setLastPage] = useState();
@@ -31,12 +29,10 @@ const App = () => {
   const [total, setTotal] = useState();
 
   // USER CART
-
   const [userCart, setUserCart] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
 
   // USER ORDER
-
   const [userOrder, setUserOrder] = useState([]);
 
   const onEnterChange = (bool) => {
@@ -89,12 +85,22 @@ const App = () => {
           />
           <Route
             path="/cart"
-            element={<Cart userCart={userCart} setUserCart={setUserCart} />}
+            element={
+              isLoggedIn ? (
+                <Cart userCart={userCart} setUserCart={setUserCart} />
+              ) : (
+                <Home />
+              )
+            }
           />
           <Route
             path="/orders"
             element={
-              <Orders userOrder={userOrder} setUserOrder={setUserOrder} />
+              isLoggedIn ? (
+                <Orders userOrder={userOrder} setUserOrder={setUserOrder} />
+              ) : (
+                <Home />
+              )
             }
           />
           <Route
@@ -114,7 +120,6 @@ const App = () => {
               />
             }
           />
-          <Route path="/search" element={<ProductSearch />} />
         </Routes>
         <Footer />
       </SelectedItemContext.Provider>

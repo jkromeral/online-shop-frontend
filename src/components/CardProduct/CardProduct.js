@@ -9,6 +9,8 @@ const CardProduct = (props) => {
   const [modal, setModal] = useState(false);
   const username = useContext(UsernameContext);
 
+  // shows more item description
+
   const onSetModal = (bool) => {
     setModal(bool);
   };

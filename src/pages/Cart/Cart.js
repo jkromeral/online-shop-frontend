@@ -8,6 +8,8 @@ const Cart = ({ userCart, setUserCart }) => {
   const username = useContext(UsernameContext);
   const { selectedItems } = useContext(SelectedItemContext);
 
+  // fetch data to display each product of logged in user
+
   useEffect(() => {
     fetch(`http://localhost:3001/cart/${username}`)
       .then((res) => res.json())
@@ -16,9 +18,13 @@ const Cart = ({ userCart, setUserCart }) => {
       });
   }, [userCart]);
 
+  // shows total price of selected items in user cart
+
   const selectedItemsPrice = selectedItems
     .map((item) => item.total_price)
     .reduce((prev, curr) => prev + curr, 0);
+
+  // to add selected items/products from user cart to user order page
 
   const onCheckout = () => {
     fetch(`http://localhost:3001/add-to-order`, {

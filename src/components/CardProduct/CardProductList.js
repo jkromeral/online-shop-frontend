@@ -4,6 +4,8 @@ import CardProduct from "./CardProduct";
 import Modal from "../Modal/Modal";
 
 const CardProductList = ({ products }) => {
+  // display each product
+
   const productList = products.map((product, i) => {
     return (
       <CardProduct

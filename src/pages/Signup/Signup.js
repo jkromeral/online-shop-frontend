@@ -11,6 +11,8 @@ const Signup = ({ onEnterChange, onUserChange, isLoggedIn }) => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
+  // to enable user to register
+
   const onSignup = () => {
     if (
       username !== "" &&
@@ -42,11 +44,15 @@ const Signup = ({ onEnterChange, onUserChange, isLoggedIn }) => {
     }
   };
 
+  // when incorrect or invalid input, display message for 5 sec
+
   useEffect(() => {
     setTimeout(() => {
       setMessage("");
     }, 5000);
   }, [message]);
+
+  // when registered, navigate to home page
 
   if (isLoggedIn) {
     return <Navigate to="/" />;

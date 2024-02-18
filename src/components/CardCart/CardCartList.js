@@ -2,6 +2,8 @@ import React from "react";
 import CardCart from "./CardCart";
 
 const CardCartList = ({ cart }) => {
+  // display each item in user cart page
+
   const productList = cart.map((product, i) => {
     return (
       <CardCart

@@ -7,13 +7,15 @@ import "./Orders.css";
 const Orders = ({ userOrder, setUserOrder }) => {
   const username = useContext(UsernameContext);
 
+  // fetch data to display each product of logged in user
+
   useEffect(() => {
     fetch(`http://localhost:3001/orders/${username}`)
       .then((res) => res.json())
       .then((user_order_details) => {
         setUserOrder(user_order_details);
       });
-  }, []);
+  }, [userOrder]);
 
   return (
     <>

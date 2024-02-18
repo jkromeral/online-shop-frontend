@@ -8,6 +8,8 @@ const Login = ({ onEnterChange, onUserChange, isLoggedIn }) => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
+  // to enable user to login
+
   const onLogin = () => {
     if (username !== "" && password !== "") {
       fetch("http://localhost:3001/login", {
@@ -34,11 +36,15 @@ const Login = ({ onEnterChange, onUserChange, isLoggedIn }) => {
     }
   };
 
+  // when incorrect or invalid input, display message for 5 sec
+
   useEffect(() => {
     setTimeout(() => {
       setMessage("");
     }, 5000);
   }, [message]);
+
+  // when logged in, navigate to home page
 
   if (isLoggedIn) {
     return <Navigate to="/" />;

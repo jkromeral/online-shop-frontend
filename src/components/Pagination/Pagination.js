@@ -8,6 +8,8 @@ const Pagination = ({
   perPage,
   total,
 }) => {
+  // count number of pages depending on selected category
+
   const pages = [];
 
   for (let i = 1; i <= Math.ceil(total / perPage); i++) {
@@ -17,6 +19,8 @@ const Pagination = ({
   return (
     <div id="pagination">
       <div className="buttons">
+        {/* shows pages that can be selected */}
+
         {pages.map((page, index) => {
           return (
             <button

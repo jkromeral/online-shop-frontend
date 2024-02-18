@@ -11,6 +11,8 @@ const Buttons = ({
 }) => {
   const username = useContext(UsernameContext);
 
+  // increase item quantity in user cart
+
   const onIncreaseQuantity = () => {
     fetch(`http://localhost:3001/increase-quantity`, {
       method: "PUT",
@@ -29,6 +31,8 @@ const Buttons = ({
         setTotal(data[0].total_price);
       });
   };
+
+  // decrease item quantity in user cart
 
   const onDecreaseQuantity = () => {
     fetch(`http://localhost:3001/decrease-quantity`, {

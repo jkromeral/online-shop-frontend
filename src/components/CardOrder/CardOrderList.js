@@ -2,6 +2,8 @@ import React from "react";
 import CardOrder from "./CardOrder";
 
 const CardOrderList = ({ order }) => {
+  // display each item in user order page
+
   const productList = order.map((product, i) => {
     return (
       <CardOrder

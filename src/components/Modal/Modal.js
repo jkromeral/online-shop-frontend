@@ -16,6 +16,8 @@ const Modal = ({ props, onSetModal, username }) => {
 
   const [quantity, setQuantity] = useState(1);
 
+  // to add an item in user cart
+
   const onAddtoCart = () => {
     fetch("http://localhost:3001/add-to-cart", {
       method: "POST",
