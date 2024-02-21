@@ -51,23 +51,26 @@
   width: 80%;
   padding: 10px;
   margin: 5% 10%;
+  background-color: #ffd700;
+  color: white;
 }
 
 .cart-summary button:hover {
   cursor: pointer;
+  color: white;
 }
 
 @media screen and (max-width: 800px) {
   #cart .cart-summary {
     width: 60vw;
-    height: 55vh;
+    height: auto;
   }
   #cart .username {
     font-size: 18px;
   }
   #cart .image-empty {
-    width: 70vw;
-    height: 50vh;
+    width: 100vw;
+    height: auto;
   }
   #cart .message1 {
     font-size: 12px;

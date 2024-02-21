@@ -16,16 +16,21 @@ const Pagination = ({
     pages.push(i);
   }
 
+  const pageNumbers = [...pages].slice(
+    Number(currentPage) - 1,
+    Number(currentPage) + 9
+  );
+
   return (
     <div id="pagination">
       <div className="buttons">
         {/* shows pages that can be selected */}
 
-        {pages.map((page, index) => {
+        {pageNumbers.map((page, index) => {
           return (
             <button
               key={index}
-              className={currentPage === page ? "active" : ""}
+              className={currentPage == page ? "btn active" : "btn bg-light"}
               onClick={() => setCurrentPage(page)}
             >
               {page}

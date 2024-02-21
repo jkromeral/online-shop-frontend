@@ -1,14 +1,16 @@
 #buttons {
   display: flex;
-  border: 1px solid black;
   width: 10vw;
   place-self: center;
   margin: 15px;
 }
 
 #buttons button {
-  width: 5vw;
+  /* width: 5vw; */
+  width: auto;
+  height: auto;
   font-size: 18px;
+  background-color: #ffd700;
 }
 
 #buttons button:hover {
@@ -22,12 +24,16 @@
 
 @media screen and (max-width: 800px) {
   #buttons {
-    width: 22vw;
+    width: 30vw;
+    height: 5vh;
   }
   #buttons button {
-    width: 6vw;
+    font-size: 10px;
+    /* width: 7.5vw;
+    height: 5vh; */
   }
   #buttons input {
-    width: 10vw;
+    width: 15vw;
+    height: 5vh;
   }
 }

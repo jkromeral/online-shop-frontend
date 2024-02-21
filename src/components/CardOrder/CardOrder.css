@@ -16,15 +16,50 @@
 
 .cardorder-con .image img {
   object-fit: contain;
-  width: 15vw;
+  width: 20vw;
   height: 20vh;
+}
+.cardorder-con .name {
+  margin-top: 10%;
+  width: 30vw;
+  height: 100%;
 }
 
 .cardorder-con .desc {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 60vw;
+  width: 20vw;
   height: 20vh;
-  border: 1px solid gray;
+}
+
+@media screen and (max-width: 800px) {
+  #cardorder {
+    width: 90vw;
+    height: 15vh;
+  }
+  .cardorder-con {
+    width: 90vw;
+    height: 15vh;
+  }
+  .cardorder-con .image img {
+    width: 30vw;
+    height: 15vh;
+  }
+  .cardorder-con .desc {
+    display: grid;
+    text-align: center;
+    width: 30vw;
+    height: 15vh;
+    overflow: hidden;
+    border-left: none;
+  }
+  .cardorder-con .name {
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 10px;
+    width: 30vw;
+    height: 100%;
+  }
 }

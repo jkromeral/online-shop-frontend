@@ -55,32 +55,33 @@
 
 @media screen and (max-width: 1200px) {
   #cardcart {
-    height: 40vh;
+    height: 25vh;
+    width: 90vw;
   }
   .cardcart-option {
     width: 20vw;
-    height: 40vh;
+    height: 25vh;
   }
   .cardcart-image {
     width: 30vw;
-    height: 40vh;
+    height: 25vh;
   }
   .cardcart-image img {
     width: 30vw;
-    height: 40vh;
+    height: 25vh;
   }
   .cardcart-desc {
     display: grid;
     text-align: center;
-    width: 30vw;
-    height: 40vh;
+    width: 40vw;
+    height: 25vh;
   }
   .cardcart-desc .name {
     text-align: center;
     word-wrap: break-word;
     text-overflow: ellipsis;
     overflow: hidden;
-    height: 40%;
+    height: 100%;
   }
   .cardcart-desc p {
     margin: 0;

@@ -27,12 +27,16 @@
 }
 
 @media screen and (max-width: 800px) {
+  /* #orders {
+    align-items: center;
+    height: 70vh;
+  } */
   #orders .username {
     font-size: 18px;
   }
   #orders img {
-    width: 70vw;
-    height: 50vh;
+    width: 100vw;
+    height: auto;
   }
   #orders .message1 {
     font-size: 12px;

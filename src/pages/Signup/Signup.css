@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .signup-con .message {
@@ -47,6 +47,7 @@
   margin: 15px 5px;
   padding: 8px;
   width: 100%;
+  background-color: #ffd700;
 }
 
 .signup-con button:hover {

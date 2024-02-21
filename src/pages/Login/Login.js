@@ -70,7 +70,11 @@ const Login = ({ onEnterChange, onUserChange, isLoggedIn }) => {
           onChange={(event) => setPassword(event.target.value)}
         ></input>
         <br />
-        <button type="submit" onClick={onLogin}>
+        <button
+          className="btn btn-warning text-white"
+          type="submit"
+          onClick={onLogin}
+        >
           Login
         </button>
         <div className="message-con">

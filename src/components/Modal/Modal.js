@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Modal.css";
 import Buttons from "../Buttons/Buttons";
+import { UserContext } from "../../App";
+import { isDisabled } from "@testing-library/user-event/dist/utils";
+
 const Modal = ({ props, onSetModal, username }) => {
   const {
     product_id,
@@ -15,6 +18,7 @@ const Modal = ({ props, onSetModal, username }) => {
   } = props;
 
   const [quantity, setQuantity] = useState(1);
+  // const { isLoggedIn } = useContext(UserContext);
 
   // to add an item in user cart
 
@@ -55,7 +59,11 @@ const Modal = ({ props, onSetModal, username }) => {
           </div>
           <div className="middle">
             <Buttons quantity={quantity} setQuantity={setQuantity} />
-            <button type="submit" className="add-btn" onClick={onAddtoCart}>
+            <button
+              type="submit"
+              className="add-btn btn text-white"
+              onClick={onAddtoCart}
+            >
               ADD TO CART
             </button>
           </div>

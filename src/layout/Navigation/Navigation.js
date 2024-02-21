@@ -6,7 +6,14 @@ import SearchBox from "../../components/SearchBox/SearchBox";
 import logo from "../../assets/logo.png";
 import logout from "../../assets/logout.png";
 
-const Navigation = ({ currentPage, isLoggedIn, onEnterChange }) => {
+const Navigation = ({
+  currentPage,
+  setCurrentPage,
+  isLoggedIn,
+  onEnterChange,
+}) => {
+  // isLoggedIn: false
+
   const onSignout = () => {
     onEnterChange(false);
   };
@@ -19,10 +26,12 @@ const Navigation = ({ currentPage, isLoggedIn, onEnterChange }) => {
         </Link>
       </div>
       <div className="navigation-m">
-        <Dropdown currentPage={currentPage} />
-        <SearchBox currentPage={currentPage} />
+        <Dropdown setCurrentPage={setCurrentPage} />
+        <SearchBox currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </div>
       <div className="navigation-r">
+        {/* changes when user is logged in  */}
+
         {isLoggedIn === false ? (
           <>
             <Link to="/login">Login</Link>

@@ -15,18 +15,18 @@
 
 #pagination button {
   margin: 5px;
-  width: 30px;
-  height: 30px;
+  width: auto;
+  height: auto;
 }
 
 #pagination button:hover {
   cursor: pointer;
-  color: orange;
-  border: 1px solid orange;
 }
 
-#pagination button.active {
-  font-weight: bold;
+#pagination .active {
+  border: none;
+  background-color: #ffd700;
+  color: white;
 }
 
 @media screen and (max-width: 800px) {
@@ -34,7 +34,6 @@
     width: 65vw;
   }
   #pagination button {
-    width: 25px;
-    height: 25px;
+    font-size: 10px;
   }
 }

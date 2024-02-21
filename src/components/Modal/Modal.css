@@ -19,7 +19,7 @@
 
 .modal-con {
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -58,6 +58,7 @@
   height: 5vh;
   place-self: center;
   margin: 15px;
+  background-color: #ffd700;
 }
 
 .modal-desc .middle .add-btn:hover {
@@ -70,15 +71,24 @@
 }
 
 @media screen and (max-width: 800px) {
+  #modal-layover {
+    height: auto;
+    width: auto;
+  }
   .modal-con {
-    width: 70vw;
+    width: 90vw;
     height: 60vh;
   }
+  .modal-image {
+    width: 50vw;
+  }
   .modal-desc {
+    width: 40vw;
     height: 60vh;
   }
   .modal-desc .middle .add-btn {
-    width: 25vw;
+    width: 30vw;
     height: 5vh;
+    text-transform: lowercase;
   }
 }

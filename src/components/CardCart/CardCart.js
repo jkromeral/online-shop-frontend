@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import Buttons from "../Buttons/Buttons";
 import "./CardCart.css";
 import trash from "../../assets/trash.png";
-import { UsernameContext, SelectedItemContext } from "../../App";
+import { UserContext, SelectedItemContext } from "../../App";
 
 const CardCart = (props) => {
   const {
@@ -14,7 +14,7 @@ const CardCart = (props) => {
     product_total_price,
   } = props;
 
-  const username = useContext(UsernameContext);
+  const username = useContext(UserContext);
   const { selectedItems, setSelectedItems } = useContext(SelectedItemContext);
   const [quantity, setQuantity] = useState(product_quantity);
   const [total, setTotal] = useState(product_total_price);

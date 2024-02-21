@@ -1,11 +1,11 @@
 import React, { useEffect, useContext } from "react";
 import CardOrderList from "../../components/CardOrder/CardOrderList";
-import { OrderContext, UsernameContext } from "../../App";
+import { OrderContext, UserContext } from "../../App";
 import no_purchase from "../../assets/no_purchase.png";
 import "./Orders.css";
 
 const Orders = ({ userOrder, setUserOrder }) => {
-  const username = useContext(UsernameContext);
+  const username = useContext(UserContext);
 
   // fetch data to display each product of logged in user
 

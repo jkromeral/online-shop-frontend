@@ -9,7 +9,7 @@ import Cart from "./pages/Cart/Cart";
 import Orders from "./pages/Orders/Orders";
 import Product from "./pages/Product/Product";
 
-export const UsernameContext = React.createContext();
+export const UserContext = React.createContext();
 export const SelectedItemContext = React.createContext();
 
 const App = () => {
@@ -52,10 +52,11 @@ const App = () => {
   };
 
   return (
-    <UsernameContext.Provider value={username}>
+    <UserContext.Provider value={username}>
       <SelectedItemContext.Provider value={{ selectedItems, setSelectedItems }}>
         <Navigation
           currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
           isLoggedIn={isLoggedIn}
           onEnterChange={onEnterChange}
         />
@@ -104,7 +105,7 @@ const App = () => {
             }
           />
           <Route
-            path="/category/:category/:currentPage"
+            path="/category/:category"
             element={
               <Product
                 products={products}
@@ -120,10 +121,27 @@ const App = () => {
               />
             }
           />
+          {/* <Route
+            path="search"
+            element={
+              <Product
+                products={products}
+                setProducts={setProducts}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                lastPage={lastPage}
+                setLastPage={setLastPage}
+                perPage={perPage}
+                setPerPage={setPerPage}
+                total={total}
+                setTotal={setTotal}
+              />
+            }
+          /> */}
         </Routes>
         <Footer />
       </SelectedItemContext.Provider>
-    </UsernameContext.Provider>
+    </UserContext.Provider>
   );
 };
 

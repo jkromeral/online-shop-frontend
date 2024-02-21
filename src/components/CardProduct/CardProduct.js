@@ -1,13 +1,13 @@
 import React, { useState, useContext } from "react";
 import "./CardProduct.css";
 import Modal from "../Modal/Modal";
-import { UsernameContext } from "../../App";
+import { UserContext } from "../../App";
 
 const CardProduct = (props) => {
   const { product_image, product_name, product_price, product_rating } = props;
 
   const [modal, setModal] = useState(false);
-  const username = useContext(UsernameContext);
+  const username = useContext(UserContext);
 
   // shows more item description
 

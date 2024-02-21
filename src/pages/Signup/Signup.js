@@ -104,7 +104,12 @@ const Signup = ({ onEnterChange, onUserChange, isLoggedIn }) => {
           onChange={(event) => setPassword(event.target.value)}
         />
         <br />
-        <button type="submit" value="Sign Up" onClick={onSignup}>
+        <button
+          className="btn btn-warning text-white"
+          type="submit"
+          value="Sign Up"
+          onClick={onSignup}
+        >
           Sign Up
         </button>
         <div className="message-con">

@@ -2,10 +2,10 @@ import React, { useState, useContext, useEffect } from "react";
 import CardCartList from "../../components/CardCart/CardCartList";
 import "./Cart.css";
 import empty_cart from "../../assets/empty_cart.png";
-import { UsernameContext, SelectedItemContext } from "../../App";
+import { UserContext, SelectedItemContext } from "../../App";
 
 const Cart = ({ userCart, setUserCart }) => {
-  const username = useContext(UsernameContext);
+  const username = useContext(UserContext);
   const { selectedItems } = useContext(SelectedItemContext);
 
   // fetch data to display each product of logged in user
@@ -74,7 +74,9 @@ const Cart = ({ userCart, setUserCart }) => {
                   </p>
                 </div>
               </div>
-              <button onClick={onCheckout}>Check out</button>
+              <button className="btn" onClick={onCheckout}>
+                Check out
+              </button>
             </div>
           </>
         ) : (

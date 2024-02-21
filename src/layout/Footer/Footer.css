@@ -2,8 +2,13 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 30vh;
-  background-color: #fff8dc;
+  height: auto;
+  background-color: #ffd700;
+}
+
+.footer-con {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-con p {
@@ -17,14 +22,10 @@
   text-align: center;
   padding: 12px;
   font-size: 12px;
-  color: black;
+  color: white;
 }
 
 @media screen and (max-width: 800px) {
-  #footer {
-    height: 25vh;
-  }
-
   .footer-con p {
     font-size: 10px;
     font-weight: bold;

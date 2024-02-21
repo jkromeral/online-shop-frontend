@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import "./Buttons.css";
-import { UsernameContext } from "../../App";
+import { UserContext } from "../../App";
 
 const Buttons = ({
   quantity,
@@ -9,7 +9,7 @@ const Buttons = ({
   product_price,
   setTotal,
 }) => {
-  const username = useContext(UsernameContext);
+  const username = useContext(UserContext);
 
   // increase item quantity in user cart
 
@@ -55,11 +55,17 @@ const Buttons = ({
 
   return (
     <div id="buttons">
-      <button onClick={onDecreaseQuantity} disabled={quantity === 1}>
+      <button
+        className="btn text-white"
+        onClick={onDecreaseQuantity}
+        disabled={quantity === 1}
+      >
         -
       </button>
       <input value={quantity} onChange={() => quantity}></input>
-      <button onClick={onIncreaseQuantity}>+</button>
+      <button className="btn  text-white" onClick={onIncreaseQuantity}>
+        +
+      </button>
     </div>
   );
 };

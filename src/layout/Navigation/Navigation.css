@@ -2,12 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff8dc;
+  /* background-color: #fff8dc; */
+  background-color: #ffd700;
 }
 
 #navigation a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .navigation-l img {

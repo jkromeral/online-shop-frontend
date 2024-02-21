@@ -16,8 +16,8 @@ const CardOrder = (props) => {
         <div className="image">
           <img src={product_image} alt="product" />
         </div>
+        <p className="name">{product_name}</p>
         <div className="desc">
-          <p>{product_name}</p>
           <p>${product_price}</p>
           <p>{product_quantity} pcs</p>
           <p>${product_total_price}</p>
