@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useSearchParams } from "react-router-dom";
 import Footer from "./layout/Footer/Footer";
 import Navigation from "./layout/Navigation/Navigation";
 import Home from "./pages/Home/Home";
@@ -8,6 +8,7 @@ import SignUp from "./pages/Signup/Signup";
 import Cart from "./pages/Cart/Cart";
 import Orders from "./pages/Orders/Orders";
 import Product from "./pages/Product/Product";
+import ProductSearch from "./pages/Product/ProductSearch";
 
 export const UserContext = React.createContext();
 export const SelectedItemContext = React.createContext();
@@ -27,6 +28,12 @@ const App = () => {
   const [lastPage, setLastPage] = useState();
   const [perPage, setPerPage] = useState();
   const [total, setTotal] = useState();
+
+  // SEARCH PRODUCTS
+
+  const [searchParams, setSearchParams] = useSearchParams({
+    q: "",
+  });
 
   // USER CART
   const [userCart, setUserCart] = useState([]);
@@ -59,9 +66,14 @@ const App = () => {
           setCurrentPage={setCurrentPage}
           isLoggedIn={isLoggedIn}
           onEnterChange={onEnterChange}
+          searchParams={searchParams}
+          setSearchParams={setSearchParams}
         />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={<Home products={products} setProducts={setProducts} />}
+          />
           <Route
             path="/login"
             element={
@@ -90,7 +102,7 @@ const App = () => {
               isLoggedIn ? (
                 <Cart userCart={userCart} setUserCart={setUserCart} />
               ) : (
-                <Home />
+                <Login />
               )
             }
           />
@@ -100,7 +112,7 @@ const App = () => {
               isLoggedIn ? (
                 <Orders userOrder={userOrder} setUserOrder={setUserOrder} />
               ) : (
-                <Home />
+                <SignUp />
               )
             }
           />
@@ -121,10 +133,10 @@ const App = () => {
               />
             }
           />
-          {/* <Route
-            path="search"
+          <Route
+            path="/search"
             element={
-              <Product
+              <ProductSearch
                 products={products}
                 setProducts={setProducts}
                 currentPage={currentPage}
@@ -135,9 +147,11 @@ const App = () => {
                 setPerPage={setPerPage}
                 total={total}
                 setTotal={setTotal}
+                searchParams={searchParams}
+                setSearchParams={setSearchParams}
               />
             }
-          /> */}
+          />
         </Routes>
         <Footer />
       </SelectedItemContext.Provider>

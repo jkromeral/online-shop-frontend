@@ -18,7 +18,7 @@ const Pagination = ({
 
   const pageNumbers = [...pages].slice(
     Number(currentPage) - 1,
-    Number(currentPage) + 9
+    Number(currentPage) + 7
   );
 
   return (

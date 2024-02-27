@@ -1,7 +1,9 @@
 #orders {
   display: grid;
   justify-content: center;
+  align-items: center;
   padding: 30px;
+  height: auto;
   background-color: #fefefa;
 }
 
@@ -27,16 +29,13 @@
 }
 
 @media screen and (max-width: 800px) {
-  /* #orders {
-    align-items: center;
-    height: 70vh;
-  } */
   #orders .username {
     font-size: 18px;
   }
   #orders img {
     width: 100vw;
     height: auto;
+    margin-top: 15vh;
   }
   #orders .message1 {
     font-size: 12px;
@@ -44,5 +43,6 @@
 
   #orders .message2 {
     font-size: 10px;
+    margin-bottom: 15vh;
   }
 }

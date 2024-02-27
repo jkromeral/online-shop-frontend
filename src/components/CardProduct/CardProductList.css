@@ -6,22 +6,18 @@
 
 .cardproductlist-con {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(5, 1fr);
   justify-content: space-evenly;
   grid-row-gap: 10px;
-  height: auto;
 }
 
 @media screen and (max-width: 800px) {
   #cardproductlist {
     margin: 30px;
     width: 85vw;
-    height: auto;
   }
 
   .cardproductlist-con {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-evenly;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

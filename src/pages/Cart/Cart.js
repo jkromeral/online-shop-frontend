@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import CardCartList from "../../components/CardCart/CardCartList";
 import "./Cart.css";
 import empty_cart from "../../assets/empty_cart.png";
@@ -46,8 +46,7 @@ const Cart = ({ userCart, setUserCart }) => {
             <p className="username">{username}'s Cart</p>
             <CardCartList cart={userCart} />
             <div className="cart-summary">
-              <p className="title">Order Summary</p>
-              <hr></hr>
+              <p className="title bg-warning text-white p-3">Order Summary</p>
               <div className="details">
                 <div>
                   <p>Items</p>
@@ -74,7 +73,10 @@ const Cart = ({ userCart, setUserCart }) => {
                   </p>
                 </div>
               </div>
-              <button className="btn" onClick={onCheckout}>
+              <button
+                className="btn btn-warning text-white"
+                onClick={onCheckout}
+              >
                 Check out
               </button>
             </div>

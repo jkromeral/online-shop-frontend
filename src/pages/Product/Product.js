@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useSearchParams } from "react-router-dom";
 import "./Product.css";
 import CardProductList from "../../components/CardProduct/CardProductList";
 import Pagination from "../../components/Pagination/Pagination";
@@ -16,10 +15,8 @@ const Product = ({
   setPerPage,
   total,
   setTotal,
-  isLoggedIn,
 }) => {
   const { category } = useParams();
-  // const q = searchParams.get("q");
 
   // fetch data to display each product based on category
 
@@ -36,20 +33,6 @@ const Product = ({
       })
       .catch((err) => console.log(err.message));
   }, [category, currentPage]);
-
-  // useEffect(() => {
-  //   fetch(`http://localhost:3001/search?q=${q}&page=${1}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setProducts(data.products);
-  //       setCurrentPage(data.current_page);
-  //       setLastPage(data.last_page);
-  //       setPerPage(data.per_page);
-  //       setTotal(data.total);
-  //       window.scrollTo({ top: 0 });
-  //     })
-  //     .catch((err) => console.log(err.message));
-  // }, [category, currentPage]);
 
   return (
     <div id="product">

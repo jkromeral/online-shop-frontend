@@ -56,14 +56,17 @@ const Buttons = ({
   return (
     <div id="buttons">
       <button
-        className="btn text-white"
+        className="btn btn-warning text-white"
         onClick={onDecreaseQuantity}
         disabled={quantity === 1}
       >
         -
       </button>
       <input value={quantity} onChange={() => quantity}></input>
-      <button className="btn  text-white" onClick={onIncreaseQuantity}>
+      <button
+        className="btn btn-warning text-white"
+        onClick={onIncreaseQuantity}
+      >
         +
       </button>
     </div>

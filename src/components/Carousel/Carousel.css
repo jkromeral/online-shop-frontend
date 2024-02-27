@@ -1,0 +1,84 @@
+#carousel {
+  margin: 30px auto 30px auto;
+  position: relative;
+  width: 80vw;
+  height: auto;
+  display: flex;
+  border-style: outset;
+}
+
+#carousel .title {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: gray;
+}
+
+#carousel .slide {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 30px auto 30px auto;
+  width: 75vw;
+}
+
+#carousel .slide-hidden {
+  display: none;
+}
+
+#carousel .prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -22px;
+  font-size: 18px;
+}
+
+#carousel .prev-disable,
+.next-disable {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -22px;
+  font-size: 18px;
+  color: #dddddd;
+}
+
+#carousel .prev,
+.prev-disable {
+  left: 0;
+}
+
+#carousel .next,
+.next-disable {
+  right: 0;
+}
+
+#carousel .prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 800px) {
+  #carousel {
+    width: 85vw;
+  }
+  #carousel .slide {
+    grid-template-columns: repeat(3, 1fr);
+    width: 80vw;
+    grid-row-gap: 5px;
+  }
+  #carousel .title {
+    top: 1%;
+    font-size: 12px;
+  }
+}

@@ -53,13 +53,14 @@
     height: 15vh;
     overflow: hidden;
     border-left: none;
+    font-size: 10px;
+    margin-top: 10px;
   }
   .cardorder-con .name {
-    word-wrap: break-word;
-    text-overflow: ellipsis;
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 15px;
     width: 30vw;
     height: 100%;
+    font-size: 11px;
   }
 }

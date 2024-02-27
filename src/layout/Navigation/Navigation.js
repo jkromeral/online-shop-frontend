@@ -7,10 +7,11 @@ import logo from "../../assets/logo.png";
 import logout from "../../assets/logout.png";
 
 const Navigation = ({
-  currentPage,
   setCurrentPage,
   isLoggedIn,
   onEnterChange,
+  searchParams,
+  setSearchParams,
 }) => {
   // isLoggedIn: false
 
@@ -27,7 +28,11 @@ const Navigation = ({
       </div>
       <div className="navigation-m">
         <Dropdown setCurrentPage={setCurrentPage} />
-        <SearchBox currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <SearchBox
+          setCurrentPage={setCurrentPage}
+          searchParams={searchParams}
+          setSearchParams={setSearchParams}
+        />
       </div>
       <div className="navigation-r">
         {/* changes when user is logged in  */}

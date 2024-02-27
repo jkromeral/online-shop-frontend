@@ -1,5 +1,43 @@
 #product {
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  height: auto;
   display: flex;
   justify-content: center;
   background-color: #fefefa;
+}
+
+#product .search-none {
+  width: 25vw;
+  height: auto;
+}
+
+#product .message1 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+
+#product .message2 {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  #product .search-none {
+    width: 50vw;
+    height: auto;
+    margin-top: 15vh;
+  }
+  #product .message1 {
+    font-size: 12px;
+  }
+
+  #product .message2 {
+    font-size: 10px;
+    margin-bottom: 15vh;
+  }
 }

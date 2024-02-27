@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div id="footer" className="bg-warning">
+    <div id="footer">
       <div className="footer-con text-white">
         <p>Help & Information</p>
         <a href="#payment-method">Payment Methods</a>
@@ -20,6 +20,10 @@ const Footer = () => {
       </div>
       <div className="footer-con text-white">
         <p>Connect With Us</p>
+        <a href="#facebook" className="fa fa-facebook"></a>
+        <a href="#twitter" className="fa fa-twitter"></a>
+        <a href="#instagram" className="fa fa-instagram"></a>
+        <a href="#reddit" className="fa fa-reddit"></a>
       </div>
     </div>
   );

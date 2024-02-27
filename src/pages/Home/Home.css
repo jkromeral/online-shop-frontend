@@ -16,18 +16,6 @@
   width: 90vw;
 }
 
-/* .homecon .top {
-  background-color: #afe1af;
-}
-
-.homecon .mid {
-  background-color: #ccccff;
-}
-
-.homecon .bot {
-  background-color: #fa8072;
-} */
-
 @media screen and (max-width: 800px) {
   .homecon .design {
     height: 15vh;

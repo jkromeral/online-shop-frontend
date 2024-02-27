@@ -5,8 +5,8 @@
 }
 
 #modal-layover {
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  width: auto;
   top: 0;
   left: 0;
   right: 0;
@@ -15,6 +15,7 @@
   background-color: rgba(0, 0, 0, 10);
   opacity: 0.5;
   cursor: pointer;
+  z-index: 1;
 }
 
 .modal-con {
@@ -26,13 +27,13 @@
   width: 70vw;
   height: 80vh;
   background-color: white;
-  opacity: 5;
+  opacity: 1;
+  z-index: 2;
 }
 
 .modal-image {
   width: 35vw;
-  height: 80vh;
-  border: 1px solid gray;
+  border-right: 1px solid #e5e4e2;
 }
 
 .modal-desc {
@@ -48,8 +49,8 @@
 
 .modal-desc .middle {
   display: grid;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  border-top: 1px solid #e5e4e2;
+  border-bottom: 1px solid #e5e4e2;
   text-align: center;
 }
 
@@ -58,7 +59,6 @@
   height: 5vh;
   place-self: center;
   margin: 15px;
-  background-color: #ffd700;
 }
 
 .modal-desc .middle .add-btn:hover {
@@ -71,13 +71,19 @@
 }
 
 @media screen and (max-width: 800px) {
-  #modal-layover {
-    height: auto;
-    width: auto;
-  }
   .modal-con {
     width: 90vw;
     height: 60vh;
+  }
+  .modal-desc .top {
+    font-size: 11px;
+  }
+
+  .modal-desc .middle {
+    font-size: 11px;
+  }
+  .modal-desc .bottom {
+    font-size: 9px;
   }
   .modal-image {
     width: 50vw;
@@ -88,7 +94,6 @@
   }
   .modal-desc .middle .add-btn {
     width: 30vw;
-    height: 5vh;
     text-transform: lowercase;
   }
 }

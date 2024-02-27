@@ -1,7 +1,6 @@
 #searchbox {
   display: flex;
   justify-content: center;
-  /* border-style: ridge; */
 }
 
 #searchbox input {

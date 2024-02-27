@@ -21,10 +21,8 @@
 #cardproduct .cardproduct-title {
   font-size: 14px;
   text-align: center;
-  word-wrap: break-word;
-  text-overflow: ellipsis;
   overflow: hidden;
-  height: 20%;
+  height: 15%;
 }
 
 .cardproduct-con {
@@ -40,29 +38,25 @@
 @media screen and (max-width: 800px) {
   #cardproduct {
     width: 25vw;
-    height: 40vh;
+    height: 30vh;
   }
   .cardproduct-image {
-    height: 20vh;
+    height: 15vh;
   }
   .cardproduct-image img {
     width: 25vw;
-    height: 20vh;
+    height: 15vh;
   }
   #cardproduct .cardproduct-title {
-    font-size: 14px;
-    text-align: center;
-    word-wrap: break-word;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    height: 18%;
+    font-size: 10px;
   }
   .cardproduct-con {
     display: grid;
     text-align: center;
+    height: 5vh;
   }
   .cardproduct-con p {
-    font-size: 12px;
-    margin: 5px;
+    font-size: 9px;
+    margin: 5px 0 0 0;
   }
 }

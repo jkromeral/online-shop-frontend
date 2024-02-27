@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import "./CardProductList.css";
-import CardProduct from "./CardProduct";
+import React from "react";
+import CardProduct from "../CardProduct/CardProduct";
+import "./Carousel.css";
+import Carousel from "./Carousel";
 
-const CardProductList = ({ products }) => {
-  // display each product
-
+const CarouselList = ({ products }) => {
   const productList = products.map((product, i) => {
     return (
       <CardProduct
@@ -22,13 +21,13 @@ const CardProductList = ({ products }) => {
       />
     );
   });
+
   return (
-    <>
-      <div id="cardproductlist">
-        <div className="cardproductlist-con">{productList}</div>
-      </div>
-    </>
+    <div id="carousellist">
+      <Carousel products={productList.slice(0, 12)} title="Most Viewed Items" />
+      <Carousel products={productList.slice(12, 24)} title="New Releases" />
+    </div>
   );
 };
 
-export default CardProductList;
+export default CarouselList;

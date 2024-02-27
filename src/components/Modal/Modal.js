@@ -61,7 +61,7 @@ const Modal = ({ props, onSetModal, username }) => {
             <Buttons quantity={quantity} setQuantity={setQuantity} />
             <button
               type="submit"
-              className="add-btn btn text-white"
+              className="add-btn btn btn-warning text-white"
               onClick={onAddtoCart}
             >
               ADD TO CART

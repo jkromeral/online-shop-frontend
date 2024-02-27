@@ -8,7 +8,7 @@
 #pagination .buttons {
   border-style: outset;
   background-color: white;
-  width: 40vw;
+  width: 30vw;
   display: flex;
   justify-content: center;
 }
@@ -31,9 +31,12 @@
 
 @media screen and (max-width: 800px) {
   #pagination .buttons {
-    width: 65vw;
+    width: 80vw;
   }
   #pagination button {
-    font-size: 10px;
+    font-size: 8px;
+  }
+  #pagination button {
+    margin: 5px 0.8px 5px 0.8px;
   }
 }

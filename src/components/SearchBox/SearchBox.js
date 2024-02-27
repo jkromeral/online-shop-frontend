@@ -1,21 +1,10 @@
-import React, { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import React from "react";
 import "./SearchBox.css";
 
-const SearchBox = ({ currentPage, setCurrentPage }) => {
-  const [products, setProducts] = useState([]);
-  const [searchParams, setSearchParams] = useSearchParams({
-    q: "",
-    // page: "",
-  });
-
-  const q = searchParams.get("q");
-  // const page = searchParams.get("page");
-
+const SearchBox = ({ setCurrentPage, setSearchParams }) => {
   const onButtonSearch = () => {
-    fetch(`http://localhost:3001/search?q=${q}&page=${1}`)
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+    window.location.pathname = "/search";
+    setCurrentPage(1);
   };
 
   return (
@@ -26,12 +15,11 @@ const SearchBox = ({ currentPage, setCurrentPage }) => {
         onChange={(event) =>
           setSearchParams({
             q: event.target.value.replace(" ", "-"),
-            // page: 1,
           })
         }
       />
       <button
-        className="bg-dark text-white"
+        className="btn btn-dark text-white"
         type="submit"
         onClick={onButtonSearch}
       >
